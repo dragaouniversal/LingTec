@@ -1,53 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 int main(int argc, char *argv[]) {
 	
-	int n, bit64, bit32, bit16, bit8, bit4, bit2, resultado;
-	printf("Insira um numero menor ou igual a 64:\n");
-	scanf("%d\n", &n);
+	int n, sucessor, antecessor;
 	
-	bit64 = n%2;
-	resultado = n/2;
+	printf("Insira um numero:\n");
+	scanf("%d", &n);
+
 	
-	bit32 = resultado%2;
-	resultado = resultado/2;
+	printf("O sucessor de %d é: %d. E o seu antecessor é: %d\n", n, n+1, n-1);
+
 	
-	bit16 = resultado%2;
-	resultado = resultado/2;
+	int a,b,c, maiortemp, maior;
 	
-	bit8 = resultado%2;
-	resultado = resultado/2;
+	printf("Insira tres valores para identificar o maior: ");
+	scanf("%d %d %d", &a, &b, &c);
 	
-	bit4 = resultado%2;
-	resultado = resultado/2;
+	maiortemp = ((a+b+ abs(a-b))/2);
+	maior = ((c+maiortemp+ abs(maiortemp-c))/2);
+	printf("O maior entre %d %d %d é: %d", a, b, c, maior);
 	
-	bit2 = resultado%2;
-	resultado = resultado/2;
-	
-	
-	printf("O numero %d em binário é: %d%d%d%d%d%d%d", n, resultado%2, bit2, bit4, bit8, bit16, bit32, bit64);
-	
-	
-	int x1, x2, y1, y2;
-	float dist, cat1, cat2;
-	
-	printf("Entre com os valores para p1(x1, y1)");
-	scanf("(%d)", &x1);
-	scanf("(%d)", &y1);
-	
-	printf("Entre com os valores para p2(x2, y2)");
-	scanf("(%d)", &x2);
-	scanf("(%d)", &y2);
-	
-	cat1 = pow((x2-x1), 2);
-	cat2 = pow((y2-y1), 2);
-	
-	dist = sqrt(cat1+cat2)
-	
-	
-	printf("Distância: %f", dist);
 	
 	
 	return 0;
